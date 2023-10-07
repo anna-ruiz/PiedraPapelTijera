@@ -74,13 +74,22 @@ class ViewController: UIViewController {
         }else{
             if maquina == tiradaJugador{
                 self.view.makeToast("Empate",duration: 1, position: .top)
-            }else if (maquina == "TIJERA" && tiradaJugador == "PAPEL") | (maquina == "PIEDRA" && tiradaJugador == "TIJERA"){
+            }else if (maquina == "TIJERA" && tiradaJugador == "PAPEL") || (maquina == "PIEDRA" && tiradaJugador == "TIJERA") ||
+                        (maquina == "PAPEL" && tiradaJugador == "PIEDRA")
+            {
                 self.view.makeToast("Has perdido :(")
                 contadorMaquina += 1
+            } else if (tiradaJugador == "PIEDRA" && maquina == "TIJERA") ||
+            (tiradaJugador == "TIJERA" && maquina == "PAPEL") ||
+                        (tiradaJugador == "PAPEL" && maquina == "PIEDRA" ){
+                self.view.makeToast("Has ganado!!!", duration: 2, position: .top)
+                contadorUser += 1
+                
             }
         }
         
-        
+        lbContadorUser.text = String(contadorUser)
+        lbContadorMaquina.text = String(contadorMaquina)
     }
 }
 
