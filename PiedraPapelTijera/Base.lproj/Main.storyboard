@@ -1,24 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PiedraPapelTijera" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nWH-OS-WeU">
+                                <rect key="frame" x="82" y="94" width="250" height="299"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bb0-th-Q54">
+                                <rect key="frame" x="20" y="413" width="100" height="100"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="fvE-DH-AJ1"/>
+                                    <constraint firstAttribute="height" constant="100" id="lAG-tL-IE5"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="papel"/>
+                                <connections>
+                                    <action selector="pulsarPapel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rqe-tU-2zI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jP8-F4-0tg">
+                                <rect key="frame" x="294" y="413" width="100" height="100"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <state key="normal" backgroundImage="tijera"/>
+                                <connections>
+                                    <action selector="pulsarTijera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d1c-6d-g9Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGe-y2-B5Z">
+                                <rect key="frame" x="157" y="413" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <state key="normal" backgroundImage="piedra"/>
+                                <connections>
+                                    <action selector="pulsarPiedra:" destination="BYZ-38-t0r" eventType="touchUpInside" id="94W-T7-NOk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Usuario:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Npq-i3-2c1">
+                                <rect key="frame" x="20" y="560" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkM-5K-zUc">
+                                <rect key="frame" x="36" y="588" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Máquina:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFL-uy-t1e">
+                                <rect key="frame" x="313" y="560" width="81" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEI-rz-OeR">
+                                <rect key="frame" x="332" y="589" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Npq-i3-2c1" firstAttribute="top" secondItem="Bb0-th-Q54" secondAttribute="bottom" constant="47" id="0iW-Bu-iJW"/>
+                            <constraint firstItem="Bb0-th-Q54" firstAttribute="firstBaseline" secondItem="jP8-F4-0tg" secondAttribute="firstBaseline" id="EIw-w7-A2H"/>
+                            <constraint firstItem="Bb0-th-Q54" firstAttribute="bottom" secondItem="jP8-F4-0tg" secondAttribute="bottom" id="Gok-Cc-4Iw"/>
+                            <constraint firstItem="jP8-F4-0tg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="294" id="IsB-pA-Q7r"/>
+                            <constraint firstItem="nWH-OS-WeU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="Vce-EN-MH7"/>
+                            <constraint firstItem="nWH-OS-WeU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="afE-jM-UzQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jP8-F4-0tg" secondAttribute="trailing" constant="20" id="cx4-tg-x9d"/>
+                            <constraint firstItem="Bb0-th-Q54" firstAttribute="top" secondItem="jP8-F4-0tg" secondAttribute="top" id="mGO-vX-kQy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nWH-OS-WeU" secondAttribute="trailing" constant="82" id="nrQ-oR-9jl"/>
+                            <constraint firstItem="Bb0-th-Q54" firstAttribute="baseline" secondItem="jP8-F4-0tg" secondAttribute="baseline" id="pLe-T5-V8W"/>
+                            <constraint firstItem="Bb0-th-Q54" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="t03-PA-mTe"/>
+                            <constraint firstItem="Bb0-th-Q54" firstAttribute="leading" secondItem="Npq-i3-2c1" secondAttribute="leading" id="vSf-s4-fQb"/>
+                            <constraint firstItem="Bb0-th-Q54" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="413" id="wVV-NF-scr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imagenMaquina" destination="nWH-OS-WeU" id="DeU-qp-H6u"/>
+                        <outlet property="lbContadorMaquina" destination="hEI-rz-OeR" id="OYG-rx-faY"/>
+                        <outlet property="lbContadorUser" destination="FkM-5K-zUc" id="d3O-84-cI9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="61.607142857142854"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="papel" width="442" height="442"/>
+        <image name="piedra" width="432" height="435"/>
+        <image name="tijera" width="439" height="445"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

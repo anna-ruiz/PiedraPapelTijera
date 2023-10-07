@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		95A07D7A2AD1C7610079A69D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95A07D782AD1C7610079A69D /* LaunchScreen.storyboard */; };
 		95A07D852AD1C7620079A69D /* PiedraPapelTijeraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07D842AD1C7620079A69D /* PiedraPapelTijeraTests.swift */; };
 		95A07D902AD1C7620079A69D /* PiedraPapelTijeraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07D8F2AD1C7620079A69D /* PiedraPapelTijeraUITests.swift */; };
+		95A07DA22AD1F5E60079A69D /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 95A07DA12AD1F5E60079A69D /* Toast */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95A07DA22AD1F5E60079A69D /* Toast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +146,9 @@
 			dependencies = (
 			);
 			name = PiedraPapelTijera;
+			packageProductDependencies = (
+				95A07DA12AD1F5E60079A69D /* Toast */,
+			);
 			productName = PiedraPapelTijera;
 			productReference = 95A07D6A2AD1C7610079A69D /* PiedraPapelTijera.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 95A07D612AD1C7610079A69D;
+			packageReferences = (
+				95A07DA02AD1F5E60079A69D /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+			);
 			productRefGroup = 95A07D6B2AD1C7610079A69D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -587,6 +595,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		95A07DA02AD1F5E60079A69D /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		95A07DA12AD1F5E60079A69D /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95A07DA02AD1F5E60079A69D /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 95A07D622AD1C7610079A69D /* Project object */;
 }
